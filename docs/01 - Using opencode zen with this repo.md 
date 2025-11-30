@@ -31,3 +31,20 @@ You can also access our models through the following API endpoints.
 | Big Pickle            | big-pickle              | https://opencode.ai/zen/v1/chat/completions       | @ai-sdk/openai-compatible |
 
 The model id in your OpenCode config uses the format `opencode/<model-id>`. For example, for GPT 5.1 Codex, you would use `opencode/gpt-5.1-codex` in your config.
+
+## Prefered Models to use
+
+### Free 
+- ModelId: big-pickle
+- Endpoint: https://opencode.ai/zen/v1/chat/completions
+- ai sdk package to use: @ai-sdk/openai-compatible
+
+### Workhorse expensive 
+- ModelId: claude-sonnet-4-5	
+- Endpoint (for all anthropic models): https://opencode.ai/zen/v1/messages
+- @ai-sdk/anthropic
+
+### Max Thinging stuff 
+- ModelId: claude-opus-4-5
+- Endpoint (for all anthropic models): https://opencode.ai/zen/v1/messages
+- @ai-sdk/anthropic
