@@ -48,3 +48,8 @@ The model id in your OpenCode config uses the format `opencode/<model-id>`. For 
 - ModelId: claude-opus-4-5
 - Endpoint (for all anthropic models): https://opencode.ai/zen/v1/messages
 - @ai-sdk/anthropic
+
+### For Tinkering 
+- ModelId: gemini-3-pro
+- Endpoint: https://opencode.ai/zen/v1/models/gemini-3-pro
+- @ai-sdk/google
