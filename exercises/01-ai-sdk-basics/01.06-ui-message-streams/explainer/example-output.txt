@@ -12,7 +12,7 @@
   type: 'text-delta',
   id: '0',
   delta: ' grace,\nOur Steven, king of comfort and of might,\nWith emerald'
-}
+} 
 {
   type: 'text-delta',
   id: '0',
