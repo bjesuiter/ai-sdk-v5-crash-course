@@ -10,12 +10,8 @@ if (!zenApiKey) {
     throw new Error("OPENCODE_ZEN_API_KEY is not set");
 }
 
-const opencodeZen = createOpenAICompatible({
+export const bigPickle = createOpenAICompatible({
     baseURL: bigPickleUrl,
     apiKey: zenApiKey,
     name: "opencode-zen",
 });
-
-const model = opencodeZen("big-pickle");
-
-console.dir(model, { depth: null });
