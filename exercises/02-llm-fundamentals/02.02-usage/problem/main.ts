@@ -1,10 +1,21 @@
-import { google } from '@ai-sdk/google';
-import { streamText } from 'ai';
+import { opencodeZen } from "@local/utils";
+import { streamText } from "ai";
 
 const output = streamText({
-  model: google('gemini-2.0-flash-lite'),
-  prompt: `Which country makes the best sausages? Answer in a single paragraph.`,
+  model: opencodeZen("big-pickle"),
+  prompt:
+    `Which country makes the best sausages? Answer in a single paragraph.`,
 });
+
+console.log(`Thinking...`);
+
+console.log(
+  `
+Reasoning: 
+------------
+`,
+  await output.reasoning,
+);
 
 for await (const chunk of output.textStream) {
   process.stdout.write(chunk);
@@ -12,5 +23,10 @@ for await (const chunk of output.textStream) {
 
 console.log(); // Empty log to separate the output from the usage
 
-// TODO: Print the usage to the console
-TODO;
+const usage = await output.usage;
+console.log(`\nStatistics:`);
+console.log(`Total tokens: ${usage.totalTokens}`);
+console.log(`Cached input tokens: ${usage.cachedInputTokens}`);
+console.log(`Input tokens: ${usage.inputTokens}`);
+console.log(`Output tokens: ${usage.outputTokens}`);
+console.log(`Reasoning tokens: ${usage.reasoningTokens}`);
