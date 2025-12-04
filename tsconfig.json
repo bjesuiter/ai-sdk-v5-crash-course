@@ -20,7 +20,7 @@
     "allowImportingTsExtensions": true,
     "noEmit": true,
     "jsx": "react",
-
+    "types": ["bun"],
     "lib": ["ESNext", "DOM", "DOM.Iterable", "DOM.AsyncIterable"]
   }
 }
