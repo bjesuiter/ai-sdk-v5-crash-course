@@ -2,7 +2,7 @@ import { generateText } from "ai";
 import { google } from "@ai-sdk/google";
 import { Tiktoken } from "js-tiktoken/lite";
 import o200k_base from "js-tiktoken/ranks/o200k_base";
-import { opencodeZen } from "@local/utils";
+import { opencodeZen } from "@local/utils/providers/opencode-zen.ts";
 import { readFile, writeFile } from "fs/promises";
 import { existsSync } from "fs";
 import { dirname, join } from "path";

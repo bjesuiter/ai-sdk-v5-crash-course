@@ -1,9 +1,9 @@
 import { google } from "@ai-sdk/google";
 import { generateText } from "ai";
-import { opencodeZen } from "@local/utils";
-import { zenGoogle } from "@local/utils/src/providers/zen-google.ts";
-import { zenOpenai } from "@local/utils/src/providers/zen-openai.ts";
-import { zenAnthropic } from "@local/utils/src/providers/zen-anthropic.ts";
+import { opencodeZen } from "@local/utils/providers/opencode-zen.ts";
+import { zenGoogle } from "@local/utils/providers/zen-google.ts";
+import { zenOpenai } from "@local/utils/providers/zen-openai.ts";
+import { zenAnthropic } from "@local/utils/providers/zen-anthropic.ts";
 
 // I recommend using the Google Gemini model:
 // gemini-2.0-flash-lite

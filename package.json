@@ -8,7 +8,8 @@
     "dev": "ai-hero-cli exercise",
     "exercise": "ai-hero-cli exercise",
     "prepare": "husky",
-    "lint": "oxlint --type-aware"
+    "lint": "oxlint --type-aware",
+    "typecheck": "tsc --noEmit"
   },
   "keywords": [],
   "author": "",

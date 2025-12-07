@@ -1,4 +1,4 @@
-import { opencodeZen } from "@local/utils";
+import { opencodeZen } from "@local/utils/providers/opencode-zen.ts";
 import {
   convertToModelMessages,
   createUIMessageStreamResponse,
