@@ -9,7 +9,10 @@
     "typescript": "^5"
   },
   "dependencies": {
-    "@ai-sdk/openai-compatible": "^1.0.28",
-    "ai": "^5.0.104"
+    "@ai-sdk/anthropic": "catalog:",
+    "@ai-sdk/google": "catalog:",
+    "@ai-sdk/openai": "catalog:",
+    "@ai-sdk/openai-compatible": "catalog:",
+    "ai": "catalog:"
   }
 }
