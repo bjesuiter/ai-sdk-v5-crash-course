@@ -5,8 +5,10 @@
   "repository": "https://github.com/ai-hero-dev/ai-sdk-v5-crash-course",
   "type": "module",
   "scripts": {
-    "dev": "ai-hero-cli exercise",
-    "exercise": "ai-hero-cli exercise",
+    "dev": "DEV_ENV=jb varlock run -- ai-hero-cli exercise",
+    "exercise": "DEV_ENV=jb varlock run -- ai-hero-cli exercise",
+    "env:check": "DEV_ENV=jb varlock load",
+    "env:scan": "varlock scan",
     "prepare": "husky",
     "lint": "oxlint --type-aware",
     "typecheck": "tsc --noEmit"
@@ -78,7 +80,8 @@
     "oxlint": "^1.31.0",
     "oxlint-tsgolint": "^0.8.3",
     "prettier": "^3.7.4",
-    "tsx": "^4.21.0"
+    "tsx": "^4.21.0",
+    "varlock": "^1.9.0"
   },
   "prettier": {
     "semi": true,

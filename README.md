@@ -47,11 +47,39 @@ pnpm install
 
 3. **Configure your environment:**
 
-```bash
-cp .env.example .env
+The default dev scripts select the `jb` profile inline, so no `.env.local`
+selector is needed for normal local development.
+
+4. **Store local secrets through the selected profile** and you're ready to start
+learning.
+
+The committed `.env.jb` profile contains Varlock-native Keychain resolver refs
+created by `varlock keychain import`. Keep the exported env variable names
+unchanged, and scope Keychain items with service `varlock` and account
+`ai-sdk-v5-crash-course:jb:<ENV_VAR_NAME>`:
+
+```dotenv
+OPENAI_API_KEY=keychain(service="varlock", account="ai-sdk-v5-crash-course:jb:OPENAI_API_KEY")
 ```
 
-4. **Add your API keys to `.env`** and you're ready to start learning!
+When Varlock or Keychain tooling supports prompt text, comments, labels, or
+metadata, the picker title should include project context, for example
+`Select Keychain Item for OPENAI_API_KEY in ai-sdk-v5-crash-course`. Supporting
+text should include the repo path
+`/Users/bjesuiter/Develop/bjesuiter/ai-sdk-v5-crash-course` and `local dev`.
+Fresh Mac restore only needs synced Keychain access for normal dev scripts.
+Production and CI should still provide the same env var names from
+platform-managed secrets, not from the local macOS Keychain.
+
+Add optional exercise-specific secrets to `.env.jb` only when needed, using the
+same account pattern. Leaving an optional key out keeps that exercise dependency
+optional.
+
+Validate your local environment with:
+
+```bash
+pnpm env:check
+```
 
 ## 📚 Course Structure
 
